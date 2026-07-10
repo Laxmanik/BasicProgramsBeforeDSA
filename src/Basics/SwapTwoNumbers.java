@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class SwapTwoNumbers {
 
 	public static void main(String[] args) {
-		int temp = 0;
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Program to swap two numbers");
@@ -15,10 +14,16 @@ public class SwapTwoNumbers {
 		int num2 = scanner.nextInt();
 		scanner.close();
 		
+		swapTwoNumbersWithTempVariable(num1, num2);
+	 }
+	
+	public static void swapTwoNumbersWithTempVariable(int num1, int num2) {
 		if(num1 == num2) {
 			System.out.println("Enter two different numbers");
 			return;
 		}
+		
+		int temp = 0;
 		
 		System.out.println("Numbers before swap.\nnum1 = "+num1+" num2 = "+num2);
 		
@@ -27,5 +32,5 @@ public class SwapTwoNumbers {
 		num2 = temp;
 		
 		System.out.println("Numbers swapped.\nnum1 = "+num1+" num2 = "+num2);
-	 }
+	}
 }
